@@ -1,0 +1,44 @@
+module coo_Counter
+
+(
+    input logic clk,
+    input logic reset,
+    input logic counter_in,
+    input logic pipe_reset,
+
+    //output logic counter_out;
+    output logic [2:0] done_counter,
+    output logic [1:0] pipe_col
+);
+
+    //logic count;
+    logic [2:0] done_count;
+    logic [1:0] pipe_col_temp;
+
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin
+            //count <= 1'b0;
+            done_count <= '0;
+            pipe_col_temp <= '0;
+        end
+
+        else if (pipe_reset) begin
+            done_count <= '0;
+            pipe_col_temp <= pipe_col_temp + 1;
+        end
+
+        else if (counter_in == 1) begin
+            //count <= 1'b0;
+            done_count <= done_count + 1;
+        end
+
+        // else begin
+        //     count <= 1'b1;
+        // end
+    end
+
+    //assign counter_out = count;
+    assign done_counter = done_count;
+    assign pipe_col = pipe_col_temp;
+
+endmodule

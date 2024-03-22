@@ -1,0 +1,15 @@
+run -all
+# max_addi_answer[0]     DUT: 0       GOLD: 0 
+# max_addi_answer[1]     DUT: 0       GOLD: 0 
+# max_addi_answer[2]     DUT: 0       GOLD: 0 
+# max_addi_answer[3]     DUT: 1       GOLD: 1 
+# max_addi_answer[4]     DUT: 1       GOLD: 1 
+# max_addi_answer[5]     DUT: 2       GOLD: 2 
+# 
+# 
+# ** Note: $finish    : /afs/asu.edu/users/c/t/i/cting4/asap7_rundir/Lab4/GCN_APR_TB.sv(122)
+#    Time: 93752 ps  Iteration: 0  Instance: /GCN_APR_TB
+# 1
+# Break in Module GCN_APR_TB at /afs/asu.edu/users/c/t/i/cting4/asap7_rundir/Lab4/GCN_APR_TB.sv line 122
+
+
